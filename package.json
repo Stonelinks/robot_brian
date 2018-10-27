@@ -8,16 +8,17 @@
     "node": ">=8"
   },
   "scripts": {
-    "gen_app_yaml": "node gen_app_yaml.js > app.yaml",
-    "deploy": "npm run gen_app_yaml && gcloud app deploy",
+    "predeploy": "node predeploy.js && npm run lint",
+    "deploy": "npm run predeploy && gcloud app deploy",
     "start": "node src/main.js",
-    "lint": "prettier --write --no-semi **/*.js"
+    "lint": "prettier --write --no-semi *.js **/*.js"
   },
   "dependencies": {
     "botkit": "0.6.18",
     "express": "^4.16.3"
   },
   "devDependencies": {
+    "@google-cloud/storage": "2.2.0",
     "prettier": "1.12.1"
   }
 }

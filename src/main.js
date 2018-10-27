@@ -1,6 +1,8 @@
 const express = require("express")
 const Botkit = require("botkit")
 
+const brianFaces = require("./brianFaces")
+
 const PORT = parseInt(process.env.PORT, 10) || 8080
 const BOTKIT_DEBUG = parseInt(process.env.BOTKIT_DEBUG, 10) || 0
 
@@ -55,6 +57,14 @@ app.listen(PORT, () => {
           "Pancho Villa Taqueria"
         ])
       )
+    }
+  )
+
+  controller.hears(
+    ["brian", "face"],
+    ["direct_message", "direct_mention", "ambient"],
+    function(bot, message) {
+      bot.reply(message, chooseRandom(brianFaces))
     }
   )
 

@@ -64,3 +64,5 @@ secrets.sh
 
 # pretty stupid app engine doesn't let you set env variables securely... oh well guess we'll exclude this
 app.yaml
+
+brian_face
