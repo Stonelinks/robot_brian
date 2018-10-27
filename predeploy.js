@@ -46,7 +46,7 @@ resources:
   disk_size_gb: 10
 
 env_variables:
-  BOT_USER_OAUTH_ACCESS_TOKEN: '${process.env.BOT_USER_OAUTH_ACCESS_TOKEN}'
+  SLACK_USER_OAUTH_ACCESS_TOKEN: '${process.env.SLACK_USER_OAUTH_ACCESS_TOKEN}'
   BOTKIT_DEBUG: 0
 `
   )
