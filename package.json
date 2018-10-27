@@ -1,0 +1,22 @@
+{
+  "name": "robot_brian",
+  "description": "Robot Brian",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=8"
+  },
+  "scripts": {
+    "deploy": "gcloud app deploy",
+    "start": "node src/main.js",
+    "lint": "prettier --write --no-semi **/*.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "botkit": "0.6.18",
+    "prettier": "1.12.1"
+  }
+}
