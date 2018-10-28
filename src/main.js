@@ -3,6 +3,7 @@ const Botkit = require("botkit")
 
 const face = require("./face")
 const food = require("./food")
+const cars = require("./cars")
 const catchall = require("./catchall")
 
 const PORT = parseInt(process.env.PORT, 10) || 8080
@@ -43,6 +44,7 @@ slackController
 function setupController(controller) {
   face(controller)
   food(controller)
+  cars(controller)
   catchall(controller)
 }
 
