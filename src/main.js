@@ -4,6 +4,7 @@ const Botkit = require("botkit")
 const face = require("./face")
 const food = require("./food")
 const cars = require("./cars")
+const droneflythru4est30mph = require("./droneflythru4est30mph")
 const catchall = require("./catchall")
 
 const PORT = parseInt(process.env.PORT, 10) || 8080
@@ -45,6 +46,7 @@ function setupController(controller) {
   face(controller)
   food(controller)
   cars(controller)
+  droneflythru4est30mph(controller)
   catchall(controller)
 }
 
