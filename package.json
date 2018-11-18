@@ -9,7 +9,7 @@
   },
   "scripts": {
     "predeploy": "node predeploy.js && npm run lint",
-    "deploy": "npm run predeploy && gcloud -q app deploy",
+    "deploy": "npm run predeploy && gcloud config set project robot-brian && gcloud -q app deploy",
     "start": "node src/main.js",
     "lint": "prettier --write --no-semi *.js **/*.js"
   },
